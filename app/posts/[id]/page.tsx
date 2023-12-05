@@ -12,8 +12,8 @@ import SimilarProducts from '@/components/shared/SimilarProducts';
 
 
 const PostDetails = () => {
-    const{id} = useParams();
-    const {data: post, isPending} = useGetPostById(id || '' );
+  const { id } = useParams<{ id: string }>();
+    const { data: post, isPending } = useGetPostById(id || '');
     
      
       if(isPending) return <div>loading</div>
