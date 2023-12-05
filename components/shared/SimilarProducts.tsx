@@ -5,7 +5,7 @@ import PostCard from './PostCard';
 import { useParams } from 'next/navigation';
 
 const SimilarProducts = () => {
-    const{id} = useParams();
+    const{id} = useParams<{id: string}>();
     const {data:product, isPending: productLoading} = useSimilarProducts(id || '' );
     if(productLoading) return <div>loading data</div>
 
